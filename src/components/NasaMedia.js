@@ -10,8 +10,8 @@ function NasaMedia(props) {
         width: "80%",
         height: "84vh"
     };
-    if (type === "image") return <img src={url} style={imgStyle} />;
-    return <iframe src={url} style={iframeStyle}></iframe>;
+    if (type === "image") return <img src={url} alt="nasa astronomy photo of the day" style={imgStyle} />;
+    return <iframe src={url} title="nasa astronomy photo of the day" style={iframeStyle}></iframe>;
 }
 
 export default NasaMedia;
