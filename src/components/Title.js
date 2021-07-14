@@ -1,6 +1,6 @@
 import React from "react";
 
-function Title({ date, decDate }) {
+function Title({ date, decDate, incDate }) {
   const arrowStyle = {
     cursor: "pointer"
   };
@@ -9,7 +9,7 @@ function Title({ date, decDate }) {
       <h1>
         <span style={arrowStyle} onClick={decDate}>⬅️ </span>
         {date}
-        <span style={arrowStyle}> ➡️</span>
+        <span style={arrowStyle} onClick={incDate}> ➡️</span>
       </h1>
     </div>
   );

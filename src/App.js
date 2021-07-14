@@ -30,9 +30,22 @@ function App() {
     setDate(newDate);
   };
 
+  const incDate = () => {
+    const day = dayjs(date, 'YYYY-MM-DD');
+    const now = dayjs();
+
+    if (day.add(1, 'day').isBefore(now)) {
+      const dayPlusOne = day.add(1, 'day');
+      const newDate = dayPlusOne.format('YYYY-MM-DD');
+      setDate(newDate);
+    } else {
+      alert("You can't travel into the future");
+    }
+  };
+
   return (
     <div className="App">
-      <Title date={date} decDate={decDate} />
+      <Title date={date} decDate={decDate} incDate={incDate} />
       <NasaMedia url={mediaUrl} type={mediaType} />
     </div>
   );
