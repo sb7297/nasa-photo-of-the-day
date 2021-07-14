@@ -8,7 +8,7 @@ function App() {
   const [mediaUrl, setMediaUrl] = useState("");
   const [date, setDate] = useState("");
   useEffect(() => {
-    axios.get("https://api.nasa.gov/planetary/apod?api_key=bIUvX7E3fljMaeRzCp0Fp8HhHbLtIXnFJmTAE3p6&date=2021-03-08")
+    axios.get("https://api.nasa.gov/planetary/apod?api_key=bIUvX7E3fljMaeRzCp0Fp8HhHbLtIXnFJmTAE3p6")
     .then(res => {
       setMediaUrl(res.data.url);
       setDate(res.data.date);
