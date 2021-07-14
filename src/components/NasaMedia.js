@@ -2,7 +2,6 @@ import React from "react";
 
 function NasaMedia(props) {
     const { url, type } = props;
-    console.log(url);
     const imgStyle = {
         maxHeight: "84vh",
         maxWidth: "90%",
