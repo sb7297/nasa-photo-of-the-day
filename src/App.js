@@ -1,13 +1,13 @@
 import React from "react";
 import "./App.css";
+import NasaMedia from "./components/NasaMedia";
+import Title from "./components/Title";
 
 function App() {
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
+      <Title />
+      <NasaMedia />
     </div>
   );
 }
