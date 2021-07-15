@@ -1,17 +1,20 @@
 import React from "react";
+import styled from "styled-components";
+
+const NasaImg = styled.img`
+    max-height: 84vh;
+    max-width: 90%;
+`;
+
+const NasaIframe = styled.iframe`
+    height: 84vh;
+    width: 80%;
+`;
 
 function NasaMedia(props) {
     const { url, type } = props;
-    const imgStyle = {
-        maxHeight: "84vh",
-        maxWidth: "90%",
-    };
-    const iframeStyle = {
-        width: "80%",
-        height: "84vh"
-    };
-    if (type === "image") return <img src={url} alt="nasa astronomy photo of the day" style={imgStyle} />;
-    return <iframe src={url} title="nasa astronomy photo of the day" style={iframeStyle}></iframe>;
+    if (type === "image") return <NasaImg src={url} alt="nasa astronomy photo of the day" />;
+    return <NasaIframe src={url} title="nasa astronomy photo of the day" />;
 }
 
 export default NasaMedia;
