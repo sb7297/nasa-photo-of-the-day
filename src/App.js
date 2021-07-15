@@ -19,6 +19,8 @@ function App() {
       setMediaUrl(res.data.url);
       setDate(res.data.date);
       setMediaType(res.data.media_type);
+
+      document.title = `NASA APOD: ${date}`;
     })
     .catch(err => console.log(err));
   }, [date]);
