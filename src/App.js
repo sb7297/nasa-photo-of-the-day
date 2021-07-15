@@ -24,10 +24,10 @@ function App() {
   }, [date]);
 
   const decDate = () => {
-    const day = dayjs(date, 'YYYY-MM-DD');
-    const dayMinusOne = day.subtract(1, 'day');
-    const newDate = dayMinusOne.format('YYYY-MM-DD');
-    setDate(newDate);
+    const day = dayjs(date, 'YYYY-MM-DD')
+      .subtract(1, 'day')
+      .format('YYYY-MM-DD');
+    setDate(day);
   };
 
   const incDate = () => {
@@ -35,9 +35,9 @@ function App() {
     const now = dayjs();
 
     if (day.add(1, 'day').isBefore(now)) {
-      const dayPlusOne = day.add(1, 'day');
-      const newDate = dayPlusOne.format('YYYY-MM-DD');
-      setDate(newDate);
+      setDate(day.add(1, 'day')
+        .format('YYYY-MM-DD')
+      );
     } else {
       alert("You can't travel into the future");
     }
